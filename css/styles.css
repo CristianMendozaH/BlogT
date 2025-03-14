@@ -1,0 +1,204 @@
+:root { /* Costume propeties*/
+    --Oscuro: #212121;
+    --Negro: #000;
+    --Blanco-blanco: #FFFFFF;
+    --Oscuro-claro: #424242;
+    --Primarios: #FFA725;
+    --Blanco: #FFF5E4;
+    --Verde-palido: #C1D8C3;
+    --Verde-intenso: #6A9C89;
+}
+/* Estilos generales */
+body {
+    font-family: "Times New Roman", serif;
+    font-size: 12pt;
+    line-height: 2;
+    margin: 2.5cm;
+    background: url('../img/fondo1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--Negro);
+}
+
+/* Encabezado mejorado */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--Verde-intenso);
+    color: white;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Menú de navegación interactivo */
+nav {
+    background: var(--Verde-palido);
+    padding: 0.7rem;
+    text-align: center;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--Oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--Verde-intenso);
+    text-decoration: underline;
+}
+
+/* Secciones con efecto flotante */
+section {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+    background: var(--Blanco);
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Estilos de títulos */
+h1 {
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: left;
+    color: var(--Negro);
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: var(--Negro);
+}
+
+/* Párrafos con sangría */
+p {
+    text-indent: 1.27cm;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background: var(--Verde-intenso);
+    color: var(--Blanco-blanco);
+    padding: 1rem;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 1cm;
+        font-size: 11pt;
+    }
+
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .logo {
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        margin: 0.5cm;
+        font-size: 10pt;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+#btn-arriba {
+    display: none;
+    position: fixed;
+    bottom: 50px; /* Ajustado para que esté más arriba */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar correctamente */
+    background: var(--Verde-intenso);
+    color: var(--Blanco);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hace que el botón sea perfectamente redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+#btn-arriba:hover {
+    background: var(--Verde-palido);
+}
